@@ -5,7 +5,7 @@ import {
   RouterProvider,
   Routes,
 } from "react-router-dom";
-import { Home, About, Contact, Layout, ErrorPage } from "../page";
+import { Home, About, Contact, Layout, ErrorPage } from "./page/index";
 
 const router = createBrowserRouter([
   {
@@ -30,7 +30,8 @@ const router = createBrowserRouter([
 ]);
 
 const App = () => {
-  return <RouterProvider router={router} />
-};
+  return <RouterProvider router={router}/>
+  
+}
 
-export default App;
+export default App
