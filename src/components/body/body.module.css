@@ -1,0 +1,103 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../../assets/bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+}
+.container .profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+.profile .box_profile {
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0);
+  box-shadow: 1px 1px 10px rgba(100, 234, 255, 0.822);
+  border-radius: 50%;
+}
+.box_profile img {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(1px 1px 10px rgba(5, 45, 79, 0.999));
+}
+.container .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+.content .main_box {
+display: flex;
+justify-content: center;
+width: 100%;
+}
+h2 {
+  position: relative;
+  text-transform: uppercase;
+  -webkit-text-stroke: 3vw rgba(0, 9, 62, 0);
+  font-size: 30px;
+  font-weight: bolder;
+  background: transparent;
+  backdrop-filter: blur(20px);
+  color: rgb(3, 28, 79);
+}
+h2::before {
+  content: attr(datatype);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  color: rgb(55, 198, 255);
+  -webkit-text-stroke: 0vw rgba(0, 9, 62, 0);
+  animation: animate 5s linear infinite;
+  overflow: hidden;
+}
+@keyframes animate {
+  0% {
+    width: 0;
+  }
+  70% {
+    width: 100%;
+  }
+}
+@media (max-width: 1000px) {
+  .container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+  }
+  .container .profile {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+.container .profile .box_profile {
+  width: 200px;
+  height: 200px;
+}
+  .container .content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .container .content .main_box {
+    width: 100%;
+    display: flex;
+    justify-self: center;
+  }
+}
+/* .about{
+  width: 100%;
+  height: 300px;
+  background-color: yellow;
+} */
